@@ -9,4 +9,15 @@ def reverse(number):
     :param number: исходное число
     :return: инвертированное число
     '''
-    raise NotImplementedError
+    s = str(number)
+    print(number)
+    if number >= 0:
+        out = s[::-1]
+        out.strip("0")
+        print(out)
+        return int(out)
+    else:
+        out = s[::-1].replace('-', '')
+        out = '-' + out.strip("0")
+        print(out)
+        return int(out)
