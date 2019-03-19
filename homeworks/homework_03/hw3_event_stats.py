@@ -30,3 +30,4 @@ class TEventStats:
         """
         # TODO: реализовать метод
         raise NotImplementedError
+        #return count
