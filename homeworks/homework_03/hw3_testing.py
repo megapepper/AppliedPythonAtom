@@ -3,7 +3,6 @@
 import os
 import shutil
 
-
 class Requester:
     '''
     Какой-то класс, который умеет делать запросы
