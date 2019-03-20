@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+import collections as col
 
 class TEventStats:
     FIVE_MIN = 300
 
     def __init__(self):
         # TODO: реализовать метод
-        raise NotImplementedError
+        self._events = col.deque()
 
     def register_event(self, user_id, time):
         """
@@ -17,7 +17,7 @@ class TEventStats:
         :return: None
         """
         # TODO: реализовать метод
-        raise NotImplementedError
+        self._events.append({'user': user_id, 'time': time})
 
     def query(self, count, time):
         """
@@ -29,5 +29,9 @@ class TEventStats:
         :return: activity_count: int
         """
         # TODO: реализовать метод
-        raise NotImplementedError
-        #return count
+        c = col.Counter()
+        for event in self._events:
+            if (time - self.FIVE_MIN) < event['time'] <= time:
+                c[event['user']] += 1
+
+        return list(c.values()).count(count)
