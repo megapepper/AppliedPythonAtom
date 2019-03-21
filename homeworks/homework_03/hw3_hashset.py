@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 from homeworks.homework_03.hw3_hashmap import HashMap
 
 

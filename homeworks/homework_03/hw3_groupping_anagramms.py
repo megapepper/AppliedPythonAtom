@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 def groupping_anagramms(words):
     """
     Функция, которая группирует анаграммы.

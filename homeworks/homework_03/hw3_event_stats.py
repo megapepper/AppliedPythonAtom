@@ -2,6 +2,7 @@
 # coding: utf-8
 import collections as col
 
+
 class TEventStats:
     FIVE_MIN = 300
 
