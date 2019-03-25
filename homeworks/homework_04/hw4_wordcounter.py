@@ -35,4 +35,4 @@ def word_count_inference(path_to_dir):
         if i.is_alive():
             i.join()
     result_dict.update({"total": sum(result_dict.values())})
-    return result_dict
+    return dict(result_dict)
