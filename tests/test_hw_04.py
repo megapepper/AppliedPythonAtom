@@ -7,7 +7,7 @@ import math
 
 def test_output_dictionary():
     try:
-        output = word_count_inference("./homeworks/homework_04/test_data")
+        output = word_count_inference("test_data")
     except NotImplementedError:
         return True
     answer = {'file_02': 0, 'file_06': 184, 'file_04': 209, 'file_03': 854, 'file_07': 607,
