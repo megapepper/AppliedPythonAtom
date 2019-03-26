@@ -44,5 +44,6 @@ class VKPoster:
     def get_most_popular_posts(self, k: int) -> list:
         BUFFER = []
         BUFFER = sorted(self.post.keys(),
-                        key=lambda ForPost: (len(self.post.get(ForPost)), ForPost), reverse=True)
+                        key=lambda ForPost: (len(self.post.get(ForPost)),
+                                             ForPost), reverse=True)
         return BUFFER[:-(len(BUFFER) - k)]

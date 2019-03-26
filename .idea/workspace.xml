@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc954e8-1993-4d47-8e0b-a1e8765d11b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_02/tsv_decomposer.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_02/tsv_decomposer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homeworks/homework_02/vkposter.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_02/vkposter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/homeworks/homework_02/vkposter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -465,7 +464,7 @@
     <entry file="file://$PROJECT_DIR$/homeworks/homework_02/vkposter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
         </state>
       </provider>
     </entry>
