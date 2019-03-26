@@ -24,3 +24,5 @@ class FastSortedListMerger:
                 break
             output_list.append(max_elem)
         return output_list
+
+        raise NotImplementedError

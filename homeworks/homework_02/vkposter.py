@@ -6,7 +6,6 @@ class VKPoster:
     """Обработка постов из вк"""
 
     def __init__(self):
-        raise NotImplementedError
         self.subscr = {}  # словарь для подписок   (ключ - user_id)
         self.post = {}  # словарь для публикаций (ключ - post_id) ( массив людей, которые прочитали)
         self.autor = {}

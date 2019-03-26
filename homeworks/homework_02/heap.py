@@ -48,6 +48,7 @@ class MaxHeap(Heap):
 
     def __init__(self, array):
         super().__init__(array)
+        raise NotImplementedError
 
     def extract_maximum(self):
         extracted = self.elements.pop(0)
