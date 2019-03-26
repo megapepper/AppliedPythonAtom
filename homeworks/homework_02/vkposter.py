@@ -7,14 +7,14 @@ class VKPoster:
 
     def __init__(self):
         self.subscr = {}  # словарь для подписок   (ключ - user_id)
-        self.post = {}  # словарь для публикаций (ключ - post_id) ( массив людей, которые прочитали)
+        self.post = {}  # словарь для публикаций (ключ - post_id)
         self.autor = {}
 
     def user_posted_post(self, user_id: int, post_id: int):
         if post_id not in self.post.keys():
             self.post[post_id] = []
             if user_id not in self.autor.keys():
-                self.autor[user_id] = [post_id]  # у одног автора может быть несколько постов
+                self.autor[user_id] = [post_id]
             else:
                 self.autor[user_id].append(post_id)
 
@@ -43,6 +43,6 @@ class VKPoster:
 
     def get_most_popular_posts(self, k: int) -> list:
         BUFFER = []
-        BUFFER = sorted(self.post.keys(), key=lambda ForPost:
-        (len(self.post.get(ForPost)), ForPost), reverse=True)
+        BUFFER = sorted(self.post.keys(),
+                        key=lambda ForPost: (len(self.post.get(ForPost)), ForPost), reverse=True)
         return BUFFER[:-(len(BUFFER) - k)]
