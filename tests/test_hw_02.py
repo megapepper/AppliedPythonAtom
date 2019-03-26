@@ -16,7 +16,7 @@ def load_test_data(func_name):
     file_processor = PickleFileProcessor()
     test_filename = os.path.basename(__file__)
     test_filename = os.path.splitext(test_filename)[0]
-    test_filename = os.path.join("tests_data",
+    test_filename = os.path.join("tests/tests_data",
                                  test_filename + "_" + func_name + ".ini.pkl")
     output = file_processor.read_file(test_filename)
     return output
