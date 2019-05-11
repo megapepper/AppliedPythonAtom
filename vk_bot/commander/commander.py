@@ -67,7 +67,8 @@ class Commander:
                     else:
                         k = k + 1
 
-            k = k + abs(len(i) - len(name))  # добавление разницы в недостающих символах
+            k = k + abs(len(i) - len(
+                name))  # добавление разницы в недостающих символах
 
             # Обработка возможной опечатки
             if 7 > len(name) > 4 and k < 3:
@@ -80,4 +81,3 @@ class Commander:
                 return True
 
         return False
-
