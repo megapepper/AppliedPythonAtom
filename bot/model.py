@@ -1,12 +1,17 @@
 import numpy as np
+import gensim
 import pymorphy2
 from sklearn.neighbors import KNeighborsClassifier
 from functools import lru_cache
 from gensim.models import KeyedVectors
+import pickle
+import os
 import re
+
 
 model = KeyedVectors.load('my_model')
 morph = pymorphy2.MorphAnalyzer()
+clf_file = 'trained_knn.clf'
 clf = None
 
 
@@ -54,18 +59,21 @@ def train_model():
     clf = KNeighborsClassifier()
     clf.fit(X, y)
 
+    with open(clf_file, 'wb') as f:
+        pickle.dump(clf, f)
+
     return clf
 
 
-def get_clf():
-    if clf is not None:
-        return clf
-    else:
-        return train_model()
-
-
 def get_answer(question):
-    clf = get_clf()
+    global clf
+    if clf is None:
+        if clf_file in os.listdir():
+            with open(clf_file, 'rb') as f:
+                clf = pickle.load(f)
+        else:
+            clf = train_model()
+
     question = normalize_text(question)
     question_vect = get_question_vector(question)
     answer = clf.predict([question_vect])
