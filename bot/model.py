@@ -5,7 +5,6 @@ from functools import lru_cache
 from gensim.models import KeyedVectors
 import re
 
-
 model = KeyedVectors.load('my_model')
 morph = pymorphy2.MorphAnalyzer()
 clf = None

@@ -80,16 +80,18 @@ for event in longpoll.listen():
                                          message=message,
                                          random_id=random.randint(0, 1000))
                     elif event.text.upper() == COMMANDS[1]:
-                        message = "Пока, {}!".format(get_user_name(event.user_id))
+                        message = "Пока, {}!".format(
+                            get_user_name(event.user_id))
                         vk.messages.send(user_id=event.user_id,
                                          message=message,
                                          random_id=random.randint(0, 1000))
                     else:
                         vk.messages.send(user_id=event.user_id,
                                          message=model.get_answer(event.text),
-                                 random_id=random.randint(0, 1000))
+                                         random_id=random.randint(0, 1000))
                 else:
-                    message1 = "Не понимаю о чем вы... напишите {}".format(autorization_key)
+                    message1 = "Не понимаю о чем вы... напишите {}".format(
+                        autorization_key)
                     vk.messages.send(user_id=event.user_id,
                                      message=message1,
                                      random_id=random.randint(0, 1000))
